@@ -3,29 +3,24 @@ import java.util.List;
 
 
 public class SuperList extends  ListManager <Integer>{
-    private final int TOP= 0;
 
 
 
     @Override
     public void addElement(Integer element) {
-        list.add(TOP, element);
-
+        list.add(element);
     }
 
     @Override
-
     public Integer removeElement(int position) {
-        return list.remove(TOP);
-
+        return list.remove(position);
     }
 
     @Override
     public void showElements() {
         for (int i = 0; i < list.size(); i++) {
-            int valor = list.get(i );
-            System.out.println("elemento  " +(i+1 ) +" : " + valor);
-
+            int valor = list.get(i);
+            System.out.println("elemento  " + (i + 1) + " : " + valor);
         }
     }
 
@@ -33,19 +28,21 @@ public class SuperList extends  ListManager <Integer>{
     public void showReversedElements() {
         for (int i = list.size(); i < 0; i--) {
             int valor = list.get(i);
-            System.out.println("element " +(i)+ ": " +valor);
+            System.out.println("elemento  " + (i +1) + " : " + valor);
         }
+
+
     }
 
-    @Override
-    public String toString() {
-        String out = "Indice ->" ;
 
-        for (Integer element: list) {
-            out += element.toString() + " " ;
-        }
-        return out;
-    }
 }
+
+
+
+
+
+
+
+
 
 
