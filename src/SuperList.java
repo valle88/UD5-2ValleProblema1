@@ -1,14 +1,14 @@
-public class SuperList extends  ListManager <T>{
+public class SuperList extends  ListManager <Integer>{
     private final int TOP= 0;
 
     @Override
-    public void addElement(T element) {
+    public void addElement(Integer element) {
         list.add(TOP, element);
 
     }
 
     @Override
-    public T removeElement(int position) {
+    public Integer removeElement(int position) {
         return list.remove(TOP);
     }
 
