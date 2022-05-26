@@ -1,9 +1,10 @@
 public class SuperList extends  ListManager <T>{
 
-
+private final int TOP= 0;
     @Override
     public void addElement(T element) {
 
+        list.add(TOP, element);
     }
 
     @Override
