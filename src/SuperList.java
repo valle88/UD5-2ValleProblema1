@@ -23,7 +23,7 @@ public class SuperList extends  ListManager <Integer>{
     @Override
     public void showElements() {
         for (int i = 0; i < list.size(); i++) {
-            int valor = list.get(i);
+            int valor = list.get(i );
             System.out.println("elemento  " +(i+1 ) +" : " + valor);
 
         }
@@ -31,15 +31,18 @@ public class SuperList extends  ListManager <Integer>{
 
     @Override
     public void showReversedElements() {
-
+        for (int i = list.size(); i < 0; i--) {
+            int valor = list.get(i);
+            System.out.println("element " +(i)+ ": " +valor);
+        }
     }
 
     @Override
     public String toString() {
-        String out = " TOP -> ";
+        String out = "Indice ->" ;
 
         for (Integer element: list) {
-            out += element.toString() + " |";
+            out += element.toString() + " " ;
         }
         return out;
     }
