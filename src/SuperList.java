@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class SuperList extends  ListManager <T>{
 
 private final int TOP= 0;
@@ -8,8 +10,8 @@ private final int TOP= 0;
     }
 
     @Override
-    public t removeElement(int position) {
-        return null;
+    public T removeElement(int position) {
+        return list.remove(TOP);
     }
 
     @Override
@@ -21,4 +23,16 @@ private final int TOP= 0;
     public void showReversedElements() {
 
     }
+
+    @Override
+    public String toString() {
+        String out = " TOP -> ";
+
+        for (T element: list) {
+            out += element.toString() + " |";
+        }
+        return out;
+    }
 }
+
+
